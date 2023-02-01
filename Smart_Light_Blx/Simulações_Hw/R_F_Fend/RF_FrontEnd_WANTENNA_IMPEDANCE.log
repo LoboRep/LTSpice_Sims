@@ -1,0 +1,19 @@
+Circuit: * R:\SmartLight\Simulações_Hw\R_F_Fend\RF_FrontEnd_WANTENNA_IMPEDANCE.asc
+
+Z_source_blx: both pins shorted together -- ignoring.
+
+Date: Thu Feb 17 13:55:49 2022
+Total elapsed time: 0.122 seconds.
+
+tnom = 27
+temp = 27
+method = trap
+totiter = 0
+traniter = 0
+tranpoints = 0
+accept = 0
+rejected = 0
+matrix size = 278
+fillins = 108
+solver = Normal
+

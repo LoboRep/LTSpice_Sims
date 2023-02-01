@@ -1,0 +1,26 @@
+Circuit: * R:\SmartLight\Simulações_Hw\Draft2.asc
+
+D3: both pins shorted together -- ignoring.
+WARNING: Node NC_02 is floating.
+
+WARNING: Less than two connections to node NC_01.  This node is used by D6.
+WARNING: Less than two connections to node NC_02.  This node is used by D6.
+.OP point found by inspection.
+
+Date: Wed Jan 12 16:02:12 2022
+Total elapsed time: 0.250 seconds.
+
+tnom = 27
+temp = 27
+method = modified trap
+totiter = 22320
+traniter = 22320
+tranpoints = 4102
+accept = 3302
+rejected = 800
+matrix size = 10
+fillins = 0
+solver = Normal
+Matrix Compiler1: 346 bytes object code size  0.2/0.1/[0.1]
+Matrix Compiler2: 626 bytes object code size  0.1/0.1/[0.1]
+

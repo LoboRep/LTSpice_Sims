@@ -1,0 +1,29 @@
+[
+	{
+		"type": "raw",
+		"zo": 50,
+		"freq": 2440,
+		"er": 1,
+		"freq_unit": {
+			"unit": "MHz",
+			"multiplier": 1000000
+		},
+		"span": 0,
+		"span_unit": {
+			"unit": "MHz",
+			"multiplier": 1000000
+		}
+	},
+	{
+		"type": "bb",
+		"real": "1.20",
+		"imaginary": "0.211",
+		"abs": [
+			59.803,
+			10.557
+		],
+		"unit": "null",
+		"tol": 0,
+		"line_length": 0
+	}
+]
