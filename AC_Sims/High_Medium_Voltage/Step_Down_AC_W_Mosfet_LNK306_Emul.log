@@ -1,0 +1,20 @@
+Circuit: * D:\pedro.lobo\Documents\Altium\LTSpice_Sims\AC_Sims\High_Medium_Voltage\Step_Down_AC_W_Mosfet_LNK306_Emul.asc
+
+C15: Increased Cpar to 1e-010
+C14: Increased Cpar to 1e-010
+C13: Increased Cpar to 4.7e-012
+C12: Increased Cpar to 4.7e-012
+C11: Increased Cpar to 1e-010
+C10: Increased Cpar to 1e-010
+C9: Increased Cpar to 4.7e-012
+C8: Increased Cpar to 4.7e-012
+C6: Increased Cpar to 1e-010
+C5: Increased Cpar to 1e-010
+C4: Increased Cpar to 4.7e-012
+C2: Increased Cpar to 4.7e-012
+C3: Increased Cpar to 4.7e-012
+C1: Increased Cpar to 4.7e-012
+WARNING: Specified period is not longer than the sum of Trise, Tfall, and Ton for v9.  Increasing period to 10000
+WARNING: Specified period is not longer than the sum of Trise, Tfall, and Ton for v6.  Increasing period to 10000
+.OP point found by inspection.
+Heightened Def Con from 0.00932349 
