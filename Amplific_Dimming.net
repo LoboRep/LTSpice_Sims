@@ -1,17 +1,18 @@
 * D:\pedro.lobo\Documents\Altium\LTSpice_Sims\Amplific_Dimming.asc
 V2 V 0 12V
-V3 Input 0 PULSE(0 2.5 0 0.9 0.1 0.01 1 10)
+V3 InputTr 0 PULSE(0 2.5 0 0.9 0.1 0.01 1 10)
 M1 V N003 DimO DimO FDS9934_N
-XU2 Input N001 V 0 N002 AD8031
+XU2 InputPWM N001 V 0 N002 AD8031
 R1 N003 N002 75R
 I1 0 DimO 0.0002
 R3 DimO N001 3kR
 R4 N001 0 1kR
-C1 N002 N001 100nC
+C1 N002 DimO 100nC
+V1 InputPWM 0 PULSE(0 2.5 0 0.000001 0.000001 0.00005 0.0001 1000000000)
 .model NMOS NMOS
 .model PMOS PMOS
 .lib D:\pedro.lobo\Documents\LTspiceXVII\lib\cmp\standard.mos
-.tran 10
+.tran 1
 .lib ADI.lib
 .backanno
 .end
