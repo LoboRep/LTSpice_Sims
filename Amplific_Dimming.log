@@ -1,24 +1,57 @@
 Circuit: * D:\pedro.lobo\Documents\Altium\LTSpice_Sims\Amplific_Dimming.asc
 
 WARNING: Specified period is not longer than the sum of Trise, Tfall, and Ton for v3.  Increasing period to 1.01
-WARNING: Less than two connections to node INPUTTR.  This node is used by V3.
-Direct Newton iteration for .op point succeeded.
-Heightened Def Con from 0.182252 to 0.182252
+WARNING: Less than two connections to node INPUTPWM.  This node is used by V1.
+Instance "m:u2:14": Length shorter than recommended for a level 1 MOSFET.
+Instance "m:u2:12": Length shorter than recommended for a level 1 MOSFET.
+Direct Newton iteration failed to find .op point.  (Use ".option noopiter" to skip.)
+Starting Gmin stepping
+Increasing initial diagonal Gmin to 100
+Increasing initial diagonal Gmin to 1000
+Gmin = 1000
+Gmin = 107.374
+Gmin = 11.5292
+Gmin = 1.23794
+Gmin = 0.132923
+Gmin = 0.0142725
+Gmin = 0.0015325
+vernier = 0.5
+vernier = 0.25
+vernier = 0.125
+vernier = 0.0625
+vernier = 0.03125
+vernier = 0.015625
+vernier = 0.0078125
+vernier = 0.00390625
+vernier = 0.00195313
+vernier = 0.000976563
+Gmin = 0.00191562
+vernier = 0.000488281
+Gmin = 0
+Gmin stepping failed
 
-Date: Wed Mar 01 18:50:38 2023
-Total elapsed time: 13.056 seconds.
+Starting source stepping with srcstepmethod=0
+Source Step = 3.0303%
+vernier = 0.25
+Source Step = 0.0177557%
+Starting source stepping with srcstepmethod=1
+Source Step = 3.0303%
+vernier = 0.25
+Source stepping failed
 
-tnom = 27
-temp = 27
-method = modified trap
-totiter = 2188232
-traniter = 2188200
-tranpoints = 698803
-accept = 500887
-rejected = 197917
-matrix size = 19
-fillins = 12
-solver = Normal
-Matrix Compiler1: 1.42 KB object code size  0.4/0.4/[0.2]
-Matrix Compiler2: 1.82 KB object code size  0.3/0.4/[0.1]
+Pseudo Transient failed in finding the operating point at 5 µs.
+Trouble finding operating point....skipping operating point for Transient analysis.
+Changing Tseed to 1e-007
+Changing Tseed to 1e-009
+Changing Tseed to 1e-006
+Changing Tseed to 1e-010
+Changing Tseed to 1e-005
+Changing Tseed to 1e-011
+Changing Tseed to 0.0001
+Changing Tseed to 1e-012
+Changing Tseed to 0.001
+Changing Tseed to 1e-013
+Changing Tseed to 0.01
+Changing Tseed to 1e-014
+Fatal Error: Analysis:  Time step too small; initial timepoint: trouble with node "u2:21"
 

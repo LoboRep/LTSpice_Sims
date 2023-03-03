@@ -1,0 +1,21 @@
+* D:\pedro.lobo\Documents\Altium\LTSpice_Sims\0_10_Dimming\Amplific_Dimming.asc
+V1 V 0 12V
+V2 InputTr 0 PULSE(0 3.0 0 0.9 0.1 0.01 1 10)
+R2 N001 N002 2.7kR
+R3 N002 0 1kR
+V3 InputPWM 0 PULSE(0 3.0 0 0.0000001 0.0000001 0.000002 0.000005 10000) AC 2
+C1 N003 N002 10pC
+C2 InputPWM 0 0.1µC
+XU2 V N004 N001 Si2302CDS
+R1 N004 N003 100R
+D1 0 N005 BZX84C10VLY
+R5 N001 N005 100R
+I1 N005 0 0.0002
+XU1 InputPWM N002 V 0 N003 TLV9352
+.model D D
+.lib D:\pedro.lobo\Documents\LTspiceXVII\lib\cmp\standard.dio
+.tran 0.001
+.lib D:\pedro.lobo\Documents\Altium\LTSpice_Sims\Libs\sbomb56b\tlv9352.lib
+.lib D:\pedro.lobo\Documents\Altium\LTSpice_Sims\Libs\si2302cd\si2302cd.txt
+.backanno
+.end

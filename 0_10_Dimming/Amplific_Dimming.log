@@ -1,0 +1,77 @@
+Circuit: * D:\pedro.lobo\Documents\Altium\LTSpice_Sims\0_10_Dimming\Amplific_Dimming.asc
+
+Model "u2:pmos": Oxide thickness thinner than recommended for a level 3 MOSFET.
+Model "u2:nmos": Oxide thickness thinner than recommended for a level 3 MOSFET.
+WARNING: Specified period is not longer than the sum of Trise, Tfall, and Ton for v2.  Increasing period to 1.01
+WARNING: Less than two connections to node INPUTTR.  This node is used by V2.
+Instance "m:u2:2": Length shorter than recommended for a level 3 MOSFET.
+Instance "m:u2:1": Length shorter than recommended for a level 3 MOSFET.
+Direct Newton iteration failed to find .op point.  (Use ".option noopiter" to skip.)
+Starting Gmin stepping
+Increasing initial diagonal Gmin to 100
+Gmin = 100
+Gmin = 10.7374
+Gmin = 1.15292
+vernier = 0.5
+vernier = 0.666667
+Gmin = 0.4029
+vernier = 0.888888
+vernier = 1
+Gmin = 0.06089
+Gmin = 0.00653801
+Gmin = 0.000702013
+vernier = 0.5
+vernier = 0.25
+Gmin = 0.000254711
+vernier = 0.125
+vernier = 0.166667
+Gmin = 0.00019708
+vernier = 0.222222
+vernier = 0.296296
+Gmin = 0.000113823
+vernier = 0.395061
+Gmin = 4.86029e-005
+vernier = 0.526748
+vernier = 0.702331
+Gmin = 1.21141e-005
+vernier = 0.936441
+vernier = 0.46822
+vernier = 0.23411
+Gmin = 4.85256e-006
+vernier = 0.312147
+vernier = 0.416196
+Gmin = 2.26354e-006
+vernier = 0.554928
+Gmin = 6.98725e-007
+vernier = 0.739903
+vernier = 0.986537
+Gmin = 1.04494e-007
+vernier = 1
+Gmin = 1.12807e-008
+Gmin = 1.21125e-009
+Gmin = 1.30057e-010
+Gmin = 1.39648e-011
+Gmin = 1.49946e-012
+Gmin = 1.61003e-013
+Gmin = 0
+Gmin stepping succeeded in finding the operating point.
+
+
+Date: Fri Mar 03 11:16:46 2023
+Total elapsed time: 2.057 seconds.
+
+tnom = 27
+temp = 27
+method = modified trap
+totiter = 130427
+traniter = 128965
+tranpoints = 51096
+accept = 39350
+rejected = 11746
+matrix size = 139
+fillins = 177
+solver = Normal
+Thread vector: 7.4/4.6[3] 3.6/2.3[3] 2.2/1.8[2] 0.3/0.5[1]  2592/500
+Matrix Compiler1: 17.74 KB object code size  2.8/1.7/[0.9]
+Matrix Compiler2: 14.66 KB object code size  1.0/1.5/[0.8]
+
