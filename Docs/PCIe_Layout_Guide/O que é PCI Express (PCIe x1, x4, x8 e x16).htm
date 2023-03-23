@@ -1,0 +1,476 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html class=" js inlinesvg"><head>
+<title>O que é PCI Express? (PCIe x1, x4, x8 e x16)</title>
+<link rel="canonical" href="https://www.infowester.com/pci-express.php">
+<meta name="description" content="Tudo o que você precisa saber PCI Express: velocidades, conectores,
+lanes de x1 a x16 e as diferenças entre as versões — do PCIe 1.0 ao PCie 6.0.">
+<link href="https://www.infowester.com/newsiw.xml" rel="alternate" type="application/rss+xml" title="RSS">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta http-equiv="content-language" content="pt-br">
+<link rel="apple-touch-icon" sizes="180x180" href="https://www.infowester.com/favicon/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://www.infowester.com/favicon/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="https://www.infowester.com/favicon/favicon-16x16.png">
+<link rel="manifest" href="https://www.infowester.com/favicon/site.webmanifest">
+<link rel="mask-icon" href="https://www.infowester.com/favicon/safari-pinned-tab.svg" color="#5bbad5">
+<meta name="msapplication-TileColor" content="#da532c">
+<meta name="theme-color" content="#ffffff">
+<meta name="viewport" content="width=device-width">
+<link rel="stylesheet" href="O%20que%20%C3%A9%20PCI%20Express%20(PCIe%20x1,%20x4,%20x8%20e%20x16)_files/bootstrap.css">
+<link rel="stylesheet" href="O%20que%20%C3%A9%20PCI%20Express%20(PCIe%20x1,%20x4,%20x8%20e%20x16)_files/bootstrap-theme.css">
+<link rel="preconnect" href="https://fonts.gstatic.com/">
+<link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="">
+<link href="O%20que%20%C3%A9%20PCI%20Express%20(PCIe%20x1,%20x4,%20x8%20e%20x16)_files/css.css" rel="stylesheet" type="text/css" media="all" onload="if(media!='all')media='all'">
+<noscript><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600|PT+Serif:400,400italic&display=swap" rel="stylesheet"  type="text/css"></noscript>
+<link rel="stylesheet" href="O%20que%20%C3%A9%20PCI%20Express%20(PCIe%20x1,%20x4,%20x8%20e%20x16)_files/styles-iw.css" id="theme-styles">
+
+<script src="O%20que%20%C3%A9%20PCI%20Express%20(PCIe%20x1,%20x4,%20x8%20e%20x16)_files/f_004.txt"></script><script src="O%20que%20%C3%A9%20PCI%20Express%20(PCIe%20x1,%20x4,%20x8%20e%20x16)_files/cookie.js"></script><script src="O%20que%20%C3%A9%20PCI%20Express%20(PCIe%20x1,%20x4,%20x8%20e%20x16)_files/f_002.txt" id="google_shimpl"></script><script type="text/javascript" async="" src="O%20que%20%C3%A9%20PCI%20Express%20(PCIe%20x1,%20x4,%20x8%20e%20x16)_files/analytics.js"></script><script type="text/javascript" async="" src="O%20que%20%C3%A9%20PCI%20Express%20(PCIe%20x1,%20x4,%20x8%20e%20x16)_files/js"></script><script async="" src="O%20que%20%C3%A9%20PCI%20Express%20(PCIe%20x1,%20x4,%20x8%20e%20x16)_files/f_005.txt"></script>
+<script>
+  (adsbygoogle = window.adsbygoogle || []).push({
+    google_ad_client: "ca-pub-2797463243909555",
+    enable_page_level_ads: true
+  });
+</script>
+<style>.cookieConsentContainer{z-index:999;width:250px;min-height:20px;box-sizing:border-box;padding:10px 10px 10px 10px;background:#848484;overflow:hidden;position:fixed;bottom:150px;right:25px;display:none}.cookieConsentContainer .cookieTitle a{font-family:OpenSans,arial,sans-serif;color:#fff;font-size:14px;line-height:14px;display:block}.cookieConsentContainer .cookieDesc p{margin:0;padding:0;font-family:OpenSans,arial,sans-serif;color:#fff;font-size:12px;line-height:14px;display:block;margin-top:10px}.cookieConsentContainer .cookieDesc a{font-family:OpenSans,arial,sans-serif;color:#fff;text-decoration:underline}.cookieConsentContainer .cookieButton a{display:inline-block;font-family:OpenSans,arial,sans-serif;color:#fff;font-size:12px;font-weight:600;margin-top:6px;background:#2E2E2E;box-sizing:border-box;padding:8px 8px;text-align:center;transition:background .1s}.cookieConsentContainer .cookieButton a:hover{cursor:pointer;background:#039}@media (max-width:980px){.cookieConsentContainer{bottom:0!important;left:0!important;width:100%!important}}</style>
+
+<meta http-equiv="origin-trial" content="Az6AfRvI8mo7yiW5fLfj04W21t0ig6aMsGYpIqMTaX60H+b0DkO1uDr+7BrzMcimWzv/X7SXR8jI+uvbV0IJlwYAAACFeyJvcmlnaW4iOiJodHRwczovL2RvdWJsZWNsaWNrLm5ldDo0NDMiLCJmZWF0dXJlIjoiUHJpdmFjeVNhbmRib3hBZHNBUElzIiwiZXhwaXJ5IjoxNjgwNjUyNzk5LCJpc1N1YmRvbWFpbiI6dHJ1ZSwiaXNUaGlyZFBhcnR5Ijp0cnVlfQ=="><meta http-equiv="origin-trial" content="A+USTya+tNvDPaxUgJooz+LaVk5hPoAxpLvSxjogX4Mk8awCTQ9iop6zJ9d5ldgU7WmHqBlnQB41LHHRFxoaBwoAAACLeyJvcmlnaW4iOiJodHRwczovL2dvb2dsZXN5bmRpY2F0aW9uLmNvbTo0NDMiLCJmZWF0dXJlIjoiUHJpdmFjeVNhbmRib3hBZHNBUElzIiwiZXhwaXJ5IjoxNjgwNjUyNzk5LCJpc1N1YmRvbWFpbiI6dHJ1ZSwiaXNUaGlyZFBhcnR5Ijp0cnVlfQ=="><meta http-equiv="origin-trial" content="A7FovoGr67TUBYbnY+Z0IKoJbbmRmB8fCyirUGHavNDtD91CiGyHHSA2hDG9r9T3NjUKFi6egL3RbgTwhhcVDwUAAACLeyJvcmlnaW4iOiJodHRwczovL2dvb2dsZXRhZ3NlcnZpY2VzLmNvbTo0NDMiLCJmZWF0dXJlIjoiUHJpdmFjeVNhbmRib3hBZHNBUElzIiwiZXhwaXJ5IjoxNjgwNjUyNzk5LCJpc1N1YmRvbWFpbiI6dHJ1ZSwiaXNUaGlyZFBhcnR5Ijp0cnVlfQ=="><meta http-equiv="origin-trial" content="Az6AfRvI8mo7yiW5fLfj04W21t0ig6aMsGYpIqMTaX60H+b0DkO1uDr+7BrzMcimWzv/X7SXR8jI+uvbV0IJlwYAAACFeyJvcmlnaW4iOiJodHRwczovL2RvdWJsZWNsaWNrLm5ldDo0NDMiLCJmZWF0dXJlIjoiUHJpdmFjeVNhbmRib3hBZHNBUElzIiwiZXhwaXJ5IjoxNjgwNjUyNzk5LCJpc1N1YmRvbWFpbiI6dHJ1ZSwiaXNUaGlyZFBhcnR5Ijp0cnVlfQ=="><meta http-equiv="origin-trial" content="A+USTya+tNvDPaxUgJooz+LaVk5hPoAxpLvSxjogX4Mk8awCTQ9iop6zJ9d5ldgU7WmHqBlnQB41LHHRFxoaBwoAAACLeyJvcmlnaW4iOiJodHRwczovL2dvb2dsZXN5bmRpY2F0aW9uLmNvbTo0NDMiLCJmZWF0dXJlIjoiUHJpdmFjeVNhbmRib3hBZHNBUElzIiwiZXhwaXJ5IjoxNjgwNjUyNzk5LCJpc1N1YmRvbWFpbiI6dHJ1ZSwiaXNUaGlyZFBhcnR5Ijp0cnVlfQ=="><meta http-equiv="origin-trial" content="A7FovoGr67TUBYbnY+Z0IKoJbbmRmB8fCyirUGHavNDtD91CiGyHHSA2hDG9r9T3NjUKFi6egL3RbgTwhhcVDwUAAACLeyJvcmlnaW4iOiJodHRwczovL2dvb2dsZXRhZ3NlcnZpY2VzLmNvbTo0NDMiLCJmZWF0dXJlIjoiUHJpdmFjeVNhbmRib3hBZHNBUElzIiwiZXhwaXJ5IjoxNjgwNjUyNzk5LCJpc1N1YmRvbWFpbiI6dHJ1ZSwiaXNUaGlyZFBhcnR5Ijp0cnVlfQ=="><meta http-equiv="origin-trial" content="Az6AfRvI8mo7yiW5fLfj04W21t0ig6aMsGYpIqMTaX60H+b0DkO1uDr+7BrzMcimWzv/X7SXR8jI+uvbV0IJlwYAAACFeyJvcmlnaW4iOiJodHRwczovL2RvdWJsZWNsaWNrLm5ldDo0NDMiLCJmZWF0dXJlIjoiUHJpdmFjeVNhbmRib3hBZHNBUElzIiwiZXhwaXJ5IjoxNjgwNjUyNzk5LCJpc1N1YmRvbWFpbiI6dHJ1ZSwiaXNUaGlyZFBhcnR5Ijp0cnVlfQ=="><meta http-equiv="origin-trial" content="A+USTya+tNvDPaxUgJooz+LaVk5hPoAxpLvSxjogX4Mk8awCTQ9iop6zJ9d5ldgU7WmHqBlnQB41LHHRFxoaBwoAAACLeyJvcmlnaW4iOiJodHRwczovL2dvb2dsZXN5bmRpY2F0aW9uLmNvbTo0NDMiLCJmZWF0dXJlIjoiUHJpdmFjeVNhbmRib3hBZHNBUElzIiwiZXhwaXJ5IjoxNjgwNjUyNzk5LCJpc1N1YmRvbWFpbiI6dHJ1ZSwiaXNUaGlyZFBhcnR5Ijp0cnVlfQ=="><meta http-equiv="origin-trial" content="A7FovoGr67TUBYbnY+Z0IKoJbbmRmB8fCyirUGHavNDtD91CiGyHHSA2hDG9r9T3NjUKFi6egL3RbgTwhhcVDwUAAACLeyJvcmlnaW4iOiJodHRwczovL2dvb2dsZXRhZ3NlcnZpY2VzLmNvbTo0NDMiLCJmZWF0dXJlIjoiUHJpdmFjeVNhbmRib3hBZHNBUElzIiwiZXhwaXJ5IjoxNjgwNjUyNzk5LCJpc1N1YmRvbWFpbiI6dHJ1ZSwiaXNUaGlyZFBhcnR5Ijp0cnVlfQ=="><meta http-equiv="origin-trial" content="Az6AfRvI8mo7yiW5fLfj04W21t0ig6aMsGYpIqMTaX60H+b0DkO1uDr+7BrzMcimWzv/X7SXR8jI+uvbV0IJlwYAAACFeyJvcmlnaW4iOiJodHRwczovL2RvdWJsZWNsaWNrLm5ldDo0NDMiLCJmZWF0dXJlIjoiUHJpdmFjeVNhbmRib3hBZHNBUElzIiwiZXhwaXJ5IjoxNjgwNjUyNzk5LCJpc1N1YmRvbWFpbiI6dHJ1ZSwiaXNUaGlyZFBhcnR5Ijp0cnVlfQ=="><meta http-equiv="origin-trial" content="A+USTya+tNvDPaxUgJooz+LaVk5hPoAxpLvSxjogX4Mk8awCTQ9iop6zJ9d5ldgU7WmHqBlnQB41LHHRFxoaBwoAAACLeyJvcmlnaW4iOiJodHRwczovL2dvb2dsZXN5bmRpY2F0aW9uLmNvbTo0NDMiLCJmZWF0dXJlIjoiUHJpdmFjeVNhbmRib3hBZHNBUElzIiwiZXhwaXJ5IjoxNjgwNjUyNzk5LCJpc1N1YmRvbWFpbiI6dHJ1ZSwiaXNUaGlyZFBhcnR5Ijp0cnVlfQ=="><meta http-equiv="origin-trial" content="A7FovoGr67TUBYbnY+Z0IKoJbbmRmB8fCyirUGHavNDtD91CiGyHHSA2hDG9r9T3NjUKFi6egL3RbgTwhhcVDwUAAACLeyJvcmlnaW4iOiJodHRwczovL2dvb2dsZXRhZ3NlcnZpY2VzLmNvbTo0NDMiLCJmZWF0dXJlIjoiUHJpdmFjeVNhbmRib3hBZHNBUElzIiwiZXhwaXJ5IjoxNjgwNjUyNzk5LCJpc1N1YmRvbWFpbiI6dHJ1ZSwiaXNUaGlyZFBhcnR5Ijp0cnVlfQ=="><meta http-equiv="origin-trial" content="Az6AfRvI8mo7yiW5fLfj04W21t0ig6aMsGYpIqMTaX60H+b0DkO1uDr+7BrzMcimWzv/X7SXR8jI+uvbV0IJlwYAAACFeyJvcmlnaW4iOiJodHRwczovL2RvdWJsZWNsaWNrLm5ldDo0NDMiLCJmZWF0dXJlIjoiUHJpdmFjeVNhbmRib3hBZHNBUElzIiwiZXhwaXJ5IjoxNjgwNjUyNzk5LCJpc1N1YmRvbWFpbiI6dHJ1ZSwiaXNUaGlyZFBhcnR5Ijp0cnVlfQ=="><meta http-equiv="origin-trial" content="A+USTya+tNvDPaxUgJooz+LaVk5hPoAxpLvSxjogX4Mk8awCTQ9iop6zJ9d5ldgU7WmHqBlnQB41LHHRFxoaBwoAAACLeyJvcmlnaW4iOiJodHRwczovL2dvb2dsZXN5bmRpY2F0aW9uLmNvbTo0NDMiLCJmZWF0dXJlIjoiUHJpdmFjeVNhbmRib3hBZHNBUElzIiwiZXhwaXJ5IjoxNjgwNjUyNzk5LCJpc1N1YmRvbWFpbiI6dHJ1ZSwiaXNUaGlyZFBhcnR5Ijp0cnVlfQ=="><meta http-equiv="origin-trial" content="A7FovoGr67TUBYbnY+Z0IKoJbbmRmB8fCyirUGHavNDtD91CiGyHHSA2hDG9r9T3NjUKFi6egL3RbgTwhhcVDwUAAACLeyJvcmlnaW4iOiJodHRwczovL2dvb2dsZXRhZ3NlcnZpY2VzLmNvbTo0NDMiLCJmZWF0dXJlIjoiUHJpdmFjeVNhbmRib3hBZHNBUElzIiwiZXhwaXJ5IjoxNjgwNjUyNzk5LCJpc1N1YmRvbWFpbiI6dHJ1ZSwiaXNUaGlyZFBhcnR5Ijp0cnVlfQ=="><link rel="preload" href="O%20que%20%C3%A9%20PCI%20Express%20(PCIe%20x1,%20x4,%20x8%20e%20x16)_files/f.txt" as="script"><script type="text/javascript" src="O%20que%20%C3%A9%20PCI%20Express%20(PCIe%20x1,%20x4,%20x8%20e%20x16)_files/f.txt"></script><link rel="preload" href="O%20que%20%C3%A9%20PCI%20Express%20(PCIe%20x1,%20x4,%20x8%20e%20x16)_files/f_003.txt" as="script"><script type="text/javascript" src="O%20que%20%C3%A9%20PCI%20Express%20(PCIe%20x1,%20x4,%20x8%20e%20x16)_files/f_003.txt"></script><link rel="preload" href="O%20que%20%C3%A9%20PCI%20Express%20(PCIe%20x1,%20x4,%20x8%20e%20x16)_files/f.txt" as="script"><script type="text/javascript" src="O%20que%20%C3%A9%20PCI%20Express%20(PCIe%20x1,%20x4,%20x8%20e%20x16)_files/f.txt"></script><link rel="preload" href="O%20que%20%C3%A9%20PCI%20Express%20(PCIe%20x1,%20x4,%20x8%20e%20x16)_files/f_003.txt" as="script"><script type="text/javascript" src="O%20que%20%C3%A9%20PCI%20Express%20(PCIe%20x1,%20x4,%20x8%20e%20x16)_files/f_003.txt"></script><link rel="preload" href="O%20que%20%C3%A9%20PCI%20Express%20(PCIe%20x1,%20x4,%20x8%20e%20x16)_files/f.txt" as="script"><script type="text/javascript" src="O%20que%20%C3%A9%20PCI%20Express%20(PCIe%20x1,%20x4,%20x8%20e%20x16)_files/f.txt"></script><link rel="preload" href="O%20que%20%C3%A9%20PCI%20Express%20(PCIe%20x1,%20x4,%20x8%20e%20x16)_files/f_003.txt" as="script"><script type="text/javascript" src="O%20que%20%C3%A9%20PCI%20Express%20(PCIe%20x1,%20x4,%20x8%20e%20x16)_files/f_003.txt"></script><link rel="preload" href="O%20que%20%C3%A9%20PCI%20Express%20(PCIe%20x1,%20x4,%20x8%20e%20x16)_files/f.txt" as="script"><script type="text/javascript" src="O%20que%20%C3%A9%20PCI%20Express%20(PCIe%20x1,%20x4,%20x8%20e%20x16)_files/f.txt"></script><link rel="preload" href="O%20que%20%C3%A9%20PCI%20Express%20(PCIe%20x1,%20x4,%20x8%20e%20x16)_files/f_003.txt" as="script"><script type="text/javascript" src="O%20que%20%C3%A9%20PCI%20Express%20(PCIe%20x1,%20x4,%20x8%20e%20x16)_files/f_003.txt"></script><link rel="preload" href="O%20que%20%C3%A9%20PCI%20Express%20(PCIe%20x1,%20x4,%20x8%20e%20x16)_files/f.txt" as="script"><script type="text/javascript" src="O%20que%20%C3%A9%20PCI%20Express%20(PCIe%20x1,%20x4,%20x8%20e%20x16)_files/f.txt"></script><link rel="preload" href="O%20que%20%C3%A9%20PCI%20Express%20(PCIe%20x1,%20x4,%20x8%20e%20x16)_files/f_003.txt" as="script"><script type="text/javascript" src="O%20que%20%C3%A9%20PCI%20Express%20(PCIe%20x1,%20x4,%20x8%20e%20x16)_files/f_003.txt"></script></head>
+<body id="artigo" aria-hidden="false" style="padding: 0px 0px 154px;">
+
+<header>
+<div class="widewrapper masthead">
+<div class="container">
+<a href="https://www.infowester.com/index.php" id="logo">
+<img src="O%20que%20%C3%A9%20PCI%20Express%20(PCIe%20x1,%20x4,%20x8%20e%20x16)_files/logo-infowester.jpg" alt="Infowester" width="250" height="54"></a>
+
+
+</div> 
+</div> 
+<div class="widewrapper subheader">
+<div class="container">
+<div class="tales-breadcrumb">
+</div>
+<div id="mini-logo" align="center">
+<a href="https://www.infowester.com/index.php" id="logo">
+<img src="O%20que%20%C3%A9%20PCI%20Express%20(PCIe%20x1,%20x4,%20x8%20e%20x16)_files/logo-infowester-mini.jpg" alt="Infowester" width="100" height="22"></a><br>
+<a href="https://www.infowester.com/busca.php">[busca]</a>&nbsp;
+<a href="https://www.infowester.com/categorias.php">[categorias]</a>
+</div>
+<div id="mobile-nav-toggle" class="pull-right">
+<a href="#" data-toggle="collapse" data-target=".tales-nav .navbar-collapse">
+<i class="icon-reorder"></i>
+</a>
+</div>
+<nav class="pull-left tales-nav">
+<div class="collapse navbar-collapse">
+<ul class="nav nav-pills navbar-nav">
+<li><a href="https://www.infowester.com/index.php">•Início•</a></li>
+<li><a href="https://www.infowester.com/hardware.php">Hardware &amp; Tecnologia</a></li>
+<li><a href="https://www.infowester.com/software.php">Software &amp; Segurança</a></li>
+<li><a href="https://www.infowester.com/redes.php">Conectividade</a></li>
+<li><a href="https://www.infowester.com/dicas.php">Dicas &amp; Tutoriais</a></li>
+<li><a href="https://www.infowester.com/blog/">Blog</a></li>
+<li><a href="https://www.infowester.com/busca.php"><em>Busca</em></a></li>
+</ul>
+</div>
+</nav>
+</div> 
+</div>
+</header>
+
+<div class="widewrapper main" style="height: auto !important;">
+<div class="container" style="height: auto !important;">
+<div class="row" style="height: auto !important;">
+<div class="col-md-8 blog-main" style="height: auto !important; min-height: 0px !important;">
+<article class="blog-post" style="height: auto !important;">
+<header>
+
+<div>
+<style type="text/css">
+	.superbanner_art_ad_1 { display:inline-block; width: 320px; height: 100px; }
+	@media (max-width: 499px) { .superbanner_art_ad_1 { display: none; } }
+	@media(min-width: 500px) { .superbanner_art_ad_1 { width: 728px; height: 90px; } }
+	</style>
+<script async="" src="O%20que%20%C3%A9%20PCI%20Express%20(PCIe%20x1,%20x4,%20x8%20e%20x16)_files/f_005.txt"></script>
+
+<ins class="adsbygoogle superbanner_art_ad_1" data-ad-client="ca-pub-2797463243909555" data-ad-slot="8804079525" data-ad-format="auto" data-full-width-responsive="true" data-adsbygoogle-status="done" style="height: 280px;" data-ad-status="filled"><div id="aswift_1_host" style="border: medium none; height: 280px; width: 728px; margin: 0px; padding: 0px; position: relative; visibility: visible; background-color: transparent; display: inline-block; overflow: visible;" tabindex="0" title="Advertisement" aria-label="Advertisement"><iframe id="aswift_1" name="aswift_1" style="left:0;position:absolute;top:0;border:0;width:728px;height:280px;" sandbox="allow-forms allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts allow-top-navigation-by-user-activation" marginwidth="0" marginheight="0" vspace="0" hspace="0" allowtransparency="true" scrolling="no" src="O%20que%20%C3%A9%20PCI%20Express%20(PCIe%20x1,%20x4,%20x8%20e%20x16)_files/ads.htm" data-google-container-id="a!2" data-google-query-id="CK-X5JqY3v0CFZT47Qodfe4DRg" data-load-complete="true" width="728" height="280" frameborder="0"></iframe></div></ins>
+<script>
+	(adsbygoogle = window.adsbygoogle || []).push({});
+	</script>
+</div>
+<div id="breadcrumb">
+<a href="https://www.infowester.com/index.php">Início</a> » <a href="https://www.infowester.com/hardware.php">Tecnologia</a> »
+</div>
+<h1><a href="https://www.infowester.com/pci-express.php">O que é PCI Express? (PCIe x1, x4, x8 e x16)</a></h1>
+</header>
+<div class="body" style="height: auto !important;">
+<div class="ad">
+<style type="text/css">
+.topo_texto_1 { display: inline-block; width: 320px; height: 100px; }
+@media (max-width: 400px) { .topo_texto_1 { width: 320px; height: 100px; } }
+@media (min-width: 500px) { .topo_texto_1 { width: 336px; height: 280px; } }
+</style>
+
+<ins class="adsbygoogle topo_texto_1" data-ad-client="ca-pub-2797463243909555" data-ad-slot="6000138003" data-full-width-responsive="true" data-adsbygoogle-status="done" style="width: 336px; height: 280px;" data-ad-status="filled"><div id="aswift_2_host" style="border: medium none; height: 280px; width: 336px; margin: 0px; padding: 0px; position: relative; visibility: visible; background-color: transparent; display: inline-block;" tabindex="0" title="Advertisement" aria-label="Advertisement"><iframe id="aswift_2" name="aswift_2" style="left:0;position:absolute;top:0;border:0;width:336px;height:280px;" sandbox="allow-forms allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts allow-top-navigation-by-user-activation" marginwidth="0" marginheight="0" vspace="0" hspace="0" allowtransparency="true" scrolling="no" src="O%20que%20%C3%A9%20PCI%20Express%20(PCIe%20x1,%20x4,%20x8%20e%20x16)_files/ads.htm" data-google-container-id="a!3" data-google-query-id="CNDX5JqY3v0CFY-EUAYd6TwFnQ" data-load-complete="true" width="336" height="280" frameborder="0"></iframe></div></ins>
+<script async="" src="O%20que%20%C3%A9%20PCI%20Express%20(PCIe%20x1,%20x4,%20x8%20e%20x16)_files/f_005.txt"></script>
+<script> (adsbygoogle = window.adsbygoogle || []).push({}); </script>
+</div>
+
+<h2>Introdução</h2>
+<p><strong>PCI Express</strong> é um nome curto para <em>Peripheral Component Interconnect Express</em>, basicamente, um padrão que permite que diversos tipos de dispositivos, como placas de vídeo e <a href="https://www.infowester.com/ssd.php">SSDs</a>, sejam conectados a um computador. Esse padrão também é conhecido como <strong>PCIe</strong> ou, ainda, <strong>PCI-E</strong>.</p>
+<p>Mas como exatamente o PCI Express funciona? No que o PCIe difere das 
+portas USB, por exemplo? O que é PCI Express x1, x4, x8 e x16? Eu, 
+Emerson Alecrim, explico tudo o que você precisa saber sobre essa 
+tecnologia a partir de agora, me acompanhe.</p>
+<p>Se preferir, clique em dos links abaixo para ir direto ao tópico do seu interesse:</p>
+<p>- <a href="#definicao">PCI Express: definição</a><br>
+- <a href="#historia">Como o PCI Express surgiu</a><br>
+- <a href="#x">PCI Express x1, x4, x8 e x16</a><br>
+- <a href="#pci-2">PCI Express 2.0</a><br>
+- <a href="#pci-3">PCI Express 3.0</a><br>
+- <a href="#pci-4">PCI Express 4.0</a><br>
+- <a href="#pci-5">PCI Express 5.0</a><br>
+- <a href="#pci-6">PCI Express 6.0</a><br>
+- <a href="#velocidades">Conclusão: as velocidades do PCIe</a></p>
+<h2 id="definicao">PCI Express: definição</h2>
+<p>Para entendermos o PCI Express, é preciso olharmos para um passado 
+relativamente distante, mais precisamente, para a década de 1990. Foi 
+nela que o barramento PCI (<em>Peripheral Component Interconnect</em>) 
+surgiu. Por vários anos, esse foi o padrão mais usado para conexão de 
+placas de vídeo, placas de rede, modems e outros dispositivos a PCs e 
+até servidores.</p>
+<p>Por padrão, as conexões PCI trabalhavam com taxas de transferência de dados de até 132 MB/s (<a href="https://www.infowester.com/bit.php">megabytes</a>
+ por segundo). Mas a tecnologia evolui constantemente, você sabe. Com o 
+tempo, certos dispositivos, especialmente placas de vídeos, passaram a 
+demandar velocidades maiores.</p>
+<p>Variações do PCI conseguiam oferecer mais capacidade de transferência
+ de dados, mas ainda não era suficiente. Foi aí que surgiu o AGP (<em>Accelerated Graphics Port</em>). Esse barramento foi introduzido no mercado com velocidades que iam, teoricamente, de 266 MB/s (AGP x1) a 2.128 MB/s (AGP x8).</p>
+<p>Bem melhor, não? Tanto que o padrão AGP ficou alguns anos no mercado.
+ Mas, adivinhe: com o tempo, as especificações do AGP começaram a não 
+ser suficientes para os avanços que surgiam em aplicações gráficas. Além
+ disso, esse padrão foi desenvolvido especificamente para placas de 
+vídeo. Outros tipos de dispositivos também evoluem, certo?</p><div style="width: 100%; height: auto; clear: both; text-align: center;" class="google-auto-placed ap_container"><ins style="display: block; margin: auto; background-color: transparent; height: 280px;" data-ad-format="auto" class="adsbygoogle adsbygoogle-noablate" data-ad-client="ca-pub-2797463243909555" data-adsbygoogle-status="done" data-ad-status="filled"><div id="aswift_5_host" style="border: medium none; height: 280px; width: 750px; margin: 0px; padding: 0px; position: relative; visibility: visible; background-color: transparent; display: inline-block; overflow: visible;" tabindex="0" title="Advertisement" aria-label="Advertisement"><iframe id="aswift_5" name="aswift_5" style="left:0;position:absolute;top:0;border:0;width:750px;height:280px;" sandbox="allow-forms allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts allow-top-navigation-by-user-activation" marginwidth="0" marginheight="0" vspace="0" hspace="0" allowtransparency="true" scrolling="no" src="O%20que%20%C3%A9%20PCI%20Express%20(PCIe%20x1,%20x4,%20x8%20e%20x16)_files/ads_003.htm" data-google-container-id="a!6" data-google-query-id="CMTyiJuY3v0CFZqDUAYdb8wNXA" data-load-complete="true" width="750" height="280" frameborder="0"></iframe></div></ins></div>
+<p><img src="O%20que%20%C3%A9%20PCI%20Express%20(PCIe%20x1,%20x4,%20x8%20e%20x16)_files/slot-pcie-placa-mae.jpg" loading="lazy" alt="Slots PCIe em uma placa-mãe" width="700" height="398"><br>
+<small>Slots PCIe em uma placa-mãe (Imagem original: Asus)</small></p>
+<p>Na busca de uma solução para essas limitações, a indústria 
+desenvolveu — e continua desenvolvendo, daí o surgimento de novas 
+versões — uma tecnologia chamada <strong>3GIO</strong> que, mais tarde, foi batizada como <strong>PCI Express</strong> ou, para facilitar, <strong>PCIe</strong>.</p>
+<p>O PCIe tem velocidade inicial teórica de 250 MB/s (veja bem, inicial)
+ e pode superar os 30 GB/s (gigabytes por segundo). Você já vai entender
+ como.</p>
+<h2 id="historia">Como o PCI Express surgiu</h2>
+<p>A <a href="https://www.intel.com/">Intel</a> é uma grande precursora 
+de inovações tecnológicas. Em 2001, durante um evento próprio, a 
+companhia mostrou a necessidade de criação de uma tecnologia capaz de 
+substituir os <a href="https://www.infowester.com/barramentos.php">padrões PCI e AGP</a>: tratava-se do já mencionado 3GIO (<em>Third Generation I/O</em>). </p>
+<p>Ainda naquele ano, um grupo de empresas formou o consórcio <a href="http://pcisig.com/">PCI-SIG</a> (entre elas estão <a href="https://www.ibm.com/">IBM</a>, <a href="https://www.amd.com/">AMD</a> <a href="https://www.microsoft.com/">Microsoft</a> e <a href="https://www.nvidia.com/">Nvidia</a>, além da própria Intel, obviamente) para tratar do assunto. As primeiras especificações do 3GIO foram aprovadas ali.</p><div style="width: 100%; height: auto; clear: both; text-align: center;" class="google-auto-placed ap_container"><ins style="display: block; margin: auto; background-color: transparent; height: 280px;" data-ad-format="auto" class="adsbygoogle adsbygoogle-noablate" data-ad-client="ca-pub-2797463243909555" data-adsbygoogle-status="done" data-ad-status="filled"><div id="aswift_6_host" style="border: medium none; height: 280px; width: 750px; margin: 0px; padding: 0px; position: relative; visibility: visible; background-color: transparent; display: inline-block; overflow: visible;" tabindex="0" title="Advertisement" aria-label="Advertisement"><iframe id="aswift_6" name="aswift_6" style="left:0;position:absolute;top:0;border:0;width:750px;height:280px;" sandbox="allow-forms allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts allow-top-navigation-by-user-activation" marginwidth="0" marginheight="0" vspace="0" hspace="0" allowtransparency="true" scrolling="no" src="O%20que%20%C3%A9%20PCI%20Express%20(PCIe%20x1,%20x4,%20x8%20e%20x16)_files/ads.htm" data-google-container-id="a!7" data-google-query-id="CP6XiZuY3v0CFcLj7QodxcMEBg" data-load-complete="true" width="750" height="280" frameborder="0"></iframe></div></ins></div>
+<p>Entre os quesitos levantados nessas especificações estão: suporte ao barramento PCI, possibilidade de uso de mais de uma <em>lane</em>
+ (você já vai entender o que isso), suporte a outros tipos de conexão, 
+melhor gerenciamento de energia e mais proteção contra erros.</p>
+<p>Em abril de 2002, o PCI-SIG aprovou um conjunto de especificações 
+mais completas. Foi nessa época que a tecnologia 3GIO mudou seu nome 
+para PCI Express. </p>
+<p>Em julho de 2002, o consórcio aprovou as especificações finais do 
+padrão e, como resultado disso, surgiu oficialmente o barramento <strong>PCI Express 1.0</strong>, que foi revisado posteriormente e se tornou <strong>PCI Express 1.1</strong>.</p>
+<p>Em novembro de 2003, os primeiros dispositivos com a tecnologia PCI 
+Express passaram a ser desenvolvidos e, em 2004, esses produtos 
+começaram a chegar ao mercado.</p>
+<h2 id="x">PCI Express x1, x4, x8 e x16</h2>
+<p>Uma das características mais notáveis do PCI Express é a sua capacidade de trabalhar com <em>lanes</em>,
+ isto é, pistas ou vias de transmissão de dados. Para facilitar a 
+compreensão, pense, por um momento, em uma rodovia: quanto mais faixas 
+ela tiver, mais carros podem trafegar por vez. O princípio aqui é 
+parecido com isso.</p>
+<p>Se determinado dispositivo utiliza apenas uma via, dizemos que ele é <strong>PCIe x1</strong>. Se utiliza quatro pistas para transmissões de dados, ele é <strong>PCIe x4</strong>. Você já entendeu o resto: oito vias corresponde ao <strong>PCIe x8</strong>; 16 pistas, ao <strong>PCI x16</strong>.</p><div style="width: 100%; height: auto; clear: both; text-align: center;" class="google-auto-placed ap_container"><ins style="display: block; margin: auto; background-color: transparent; height: 280px;" data-ad-format="auto" class="adsbygoogle adsbygoogle-noablate" data-ad-client="ca-pub-2797463243909555" data-adsbygoogle-status="done" data-ad-status="filled"><div id="aswift_7_host" style="border: medium none; height: 280px; width: 750px; margin: 0px; padding: 0px; position: relative; visibility: visible; background-color: transparent; display: inline-block; overflow: visible;" tabindex="0" title="Advertisement" aria-label="Advertisement"><iframe id="aswift_7" name="aswift_7" style="left:0;position:absolute;top:0;border:0;width:750px;height:280px;" sandbox="allow-forms allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts allow-top-navigation-by-user-activation" marginwidth="0" marginheight="0" vspace="0" hspace="0" allowtransparency="true" scrolling="no" src="O%20que%20%C3%A9%20PCI%20Express%20(PCIe%20x1,%20x4,%20x8%20e%20x16)_files/ads.htm" data-google-container-id="a!8" data-google-query-id="CJzAiZuY3v0CFSSDUAYdDF4KJQ" data-load-complete="true" width="750" height="280" frameborder="0"></iframe></div></ins></div>
+<p>Por que tantas variações? Para controle de custos, essencialmente. Um
+ dispositivo que não precisa lidar com grandes volumes de dados 
+simultâneos — como uma placa de rede simples — vai funcionar bem com o 
+PCI Express x1, formato cuja implementação é mais barata. </p>
+<p>Agora, uma GPU exigente precisa de muitos dados. É por isso que a 
+ampla maioria das placas de vídeo é baseada no PCI Express x16. Como 
+você já sabe, quanto mais lanes ou vias, mais dados são trafegados ao 
+mesmo tempo. Essas são as taxas máximas teóricas:</p>
+<ul>
+<li><strong>PCIe x1:</strong> 250 MB/s</li>
+<li><strong>PCIe x4:</strong> 1.000 MB/s (ou 1 GB/s)</li>
+<li><strong>PCIe x8:</strong> 2.000 MB/s (ou 2 GB/s)</li>
+<li><strong>PCIe x16:</strong> 4.000 MB/s (ou 4 GB/s)</li>
+</ul>
+<p>Esses números dizem respeito ao PCI Express 1.0 e 1.1. A tecnologia 
+alcança taxas de transferência de dados mais elevadas. Você vai entender
+ mais nos tópicos sobre as versões do padrão. Mas, antes, vamos dar uma 
+olhada nos conectores PCIe.</p>
+<p><img src="O%20que%20%C3%A9%20PCI%20Express%20(PCIe%20x1,%20x4,%20x8%20e%20x16)_files/slot-pcie-express.jpg" loading="lazy" alt="Slots PCIe x1 e x16" width="700" height="444"><br>
+<small>Slots PCIe x1 (menor) e x16 (maior)</small></p>
+<h2>Conectores PCI Express (slots)</h2>
+<p>Ao contrário do <a href="https://www.infowester.com/usb.php">USB</a> ou do <a href="https://www.infowester.com/hdmi.php">HDMI</a>, o PCI Express é um padrão <em>interno</em>
+ de conexão, o que significa que você não vai encontrar uma porta 
+específica para essa tecnologia na traseira do seu desktop ou na lateral
+ do seu notebook. É necessário abrir o computador para encontrar, na <a href="https://www.infowester.com/placa-mae.php">placa-mãe</a>, os slots (encaixes) para dispositivos PCIe.</p>
+<p>Esses slots têm tamanhos diferentes, que variam conforme os tipos de 
+PCI Express que a placa-mãe suporta. Quanto mais pistas ou lanes houver,
+ maior o conector. Por conta disso, um PCIe x1 é curto; já um PCIe x16 é
+ alongado — e extremamente comum, afinal, esse é o padrão mais empregado
+ em placas de vídeo:</p>
+<ul>
+<li><strong>PCI Express x1:</strong> 25 mm de comprimento; 18 pinos</li>
+<li><strong>PCI Express x4:</strong> 39 mm de comprimento; 32 pinos</li>
+<li><strong>PCI Express x8:</strong> 56 mm de comprimento; 32 pinos</li>
+<li><strong>PCI Express x16:</strong> 89 mm de comprimento; 82 pinos</li>
+</ul>
+<p><img src="O%20que%20%C3%A9%20PCI%20Express%20(PCIe%20x1,%20x4,%20x8%20e%20x16)_files/pcie-x1-x4-x8-x16.jpg" loading="lazy" alt="PCIe x1, x4, x8 e 16" width="400" height="188"><br>
+<small>PCIe x1, x4, x8 e 16 (Imagem original: PCI-SIG)</small></p>
+<p>Duas observações importantes: a primeira é que esses slots nem sempre são obrigatórios. Muitos modelos de <a href="https://www.infowester.com/ssd-m2-nvme.php">SSD M.2</a>, por exemplo, têm um conector totalmente diferente, mas podem se comunicar com a placa-mãe via interface PCI Express.</p>
+<p>A segunda é que esses tamanhos de slots são padronizados, ou seja, as
+ versões posteriores do PCIe também as utilizam. Falando nisso, vamos a 
+elas.</p>
+<h2 id="pci-2">PCI Express 2.0</h2>
+<p>Até agora falamos apenas do PCI Express 1.0 e 1.1 (vamos chamá-los de 1.x). Mas, em 2007, o grupo PCI-SIG apresentou o <strong>PCI Express 2.0</strong>. A principal característica dessa nova versão é a maior largura de banda (<em>bandloading="lazy" width</em>)
+ de cada lane: até 500 MB/s. Isso significa que uma conexão PCIe 2.0 com
+ x16 pode alcançar até 8 GB/s na transferência de dados (16 x 500 MB/s).
+ </p>
+<p>Assim como as versões 1.x, o PCI Express 2.0 é baseado na codificação
+ 8b/10b, que indica que cada grupo de 8 bits é codificado em sinal de 10
+ bits em cada transmissão.</p><div style="width: 100%; height: auto; clear: both; text-align: center;" class="google-auto-placed ap_container"><ins style="display: block; margin: auto; background-color: transparent; height: 280px;" data-ad-format="auto" class="adsbygoogle adsbygoogle-noablate" data-ad-client="ca-pub-2797463243909555" data-adsbygoogle-status="done" data-ad-status="filled"><div id="aswift_8_host" style="border: medium none; height: 280px; width: 750px; margin: 0px; padding: 0px; position: relative; visibility: visible; background-color: transparent; display: inline-block; overflow: visible;" tabindex="0" title="Advertisement" aria-label="Advertisement"><iframe id="aswift_8" name="aswift_8" style="left:0;position:absolute;top:0;border:0;width:750px;height:280px;" sandbox="allow-forms allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts allow-top-navigation-by-user-activation" marginwidth="0" marginheight="0" vspace="0" hspace="0" allowtransparency="true" scrolling="no" src="O%20que%20%C3%A9%20PCI%20Express%20(PCIe%20x1,%20x4,%20x8%20e%20x16)_files/ads.htm" data-google-container-id="a!9" data-google-query-id="CNyTkpyY3v0CFdrW7QodzMkNGw" data-load-complete="true" width="750" height="280" frameborder="0"></iframe></div></ins></div>
+<p>Além disso, o PCIe 2.0 pode trabalhar com 5 GT/s (gigatransfers por 
+segundo) — um gigatransfer corresponde a um bilhão de transferências de 
+dados por segundo, basicamente. Para fins de comparação, o PCIe 1.x 
+trabalha com até 2,5 GT/s.</p>
+<h2 id="pci-3">PCI Express 3.0</h2>
+<p>O <strong>PCI Express 3.0</strong> surgiu em 2010. Em 2019, quando 
+este texto foi escrito, esse padrão ainda era bastante usado pela 
+indústria, afinal, ele proporciona até o dobro de desempenho do PCIe 
+2.0.</p>
+<p>Essa versão trabalha com 8 GT/s. A largura de banda de cada lane é de
+ 1 GB/s. Isso significa que um dispositivo PCIe 3.0 com x16 pode lidar 
+com até 16 GB/s.</p>
+<p>Em parte, o desempenho melhorado do PCI Express se deve ao uso da 
+codificação 128b/130b em vez de 8b/10b. Essa codificação mais generosa, 
+por assim dizer, é um dos fatores que permitem ao PCI Express 3.0 ser 
+mais rápido.</p>
+<p><img src="O%20que%20%C3%A9%20PCI%20Express%20(PCIe%20x1,%20x4,%20x8%20e%20x16)_files/placa-video-gigabyte-pcie.jpg" loading="lazy" alt="Placa de vídeo PCI Express 3.0" width="700" height="188"><br>
+<small>Placa de vídeo PCI Express 3.0 (Imagem original: Gigabyte)</small></p>
+<h2 id="pci-4">PCI Express 4.0</h2>
+<p>As especificações do <strong>PCI Express 4.0</strong> foram 
+finalizadas em 2017. Sim, o intervalo em relação à geração anterior foi 
+de sete anos. É muito tempo, mas o PCI-SIG teve dificuldades para fazer o
+ desempenho dobrar em relação ao PCIe 3.0 e manter a compatibilidade com
+ as versões anteriores.</p>
+<p>Mas os esforços valeram a pena: o PCIe 4.0 é capaz de trabalhar com 
+16 GT/s e 2 GB/s por pista. Em virtude disso, uma conexão PCI Express 
+4.0 x16 tem velocidade teórica de até 32 GB/s.</p>
+<p>Aqui, a codificação também é 128b/130b.</p>
+<div id="promo">
+</div>
+<h2 id="pci-5">PCI Express 5.0</h2>
+<p>O <strong>PCI Express 5.0</strong> foi anunciado oficialmente em 
+junho de 2019, um intervalo de mais ou menos um ano e meio em relação ao
+ PCI Express 4.0. Uma das razões disso é que as duas versões são, 
+tecnicamente, muito parecidas, tanto que o PCIe 5.0 é visto como uma 
+extensão do PCIe 4.0.</p>
+<p>Pode até ser uma extensão, mas a lógica de dobrar a velocidade foi 
+mantida: conexões PCIe 5.0 podem trabalhar com 32 GT/s e até 4 GB/s por 
+lane, ou seja, 64 GB/s em x16. A codificação 128b/130b foi mantida.</p><div style="width: 100%; height: auto; clear: both; text-align: center;" class="google-auto-placed ap_container"><ins style="display: block; margin: auto; background-color: transparent; height: 280px;" data-ad-format="auto" class="adsbygoogle adsbygoogle-noablate" data-ad-client="ca-pub-2797463243909555" data-adsbygoogle-status="done" data-ad-status="filled"><div id="aswift_9_host" style="border: medium none; height: 280px; width: 750px; margin: 0px; padding: 0px; position: relative; visibility: visible; background-color: transparent; display: inline-block; overflow: visible;" tabindex="0" title="Advertisement" aria-label="Advertisement"><iframe id="aswift_9" name="aswift_9" style="left:0;position:absolute;top:0;border:0;width:750px;height:280px;" sandbox="allow-forms allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts allow-top-navigation-by-user-activation" marginwidth="0" marginheight="0" vspace="0" hspace="0" allowtransparency="true" scrolling="no" src="O%20que%20%C3%A9%20PCI%20Express%20(PCIe%20x1,%20x4,%20x8%20e%20x16)_files/ads.htm" data-google-container-id="a!a" data-google-query-id="CLjS4qiY3v0CFQvR7Qodh5gD5w" data-load-complete="true" width="750" height="280" frameborder="0"></iframe></div></ins></div>
+<p>Vale destacar que o PCI Express 5.0 é compatível com dispositivos 
+baseados nas versões anteriores da tecnologia, assim como estas são 
+compatíveis com as antecessoras — um dos requisitos de cada nova versão é
+ ter retrocompatibilidade.</p>
+<p>Saiba mais no texto que explica <a href="https://www.infowester.com/responde/pci-express-4-0-pcie-5-0-velocidades-diferencas/">as diferenças entre o PCI Express 4.0 e o PCI Express 5.0</a>.</p>
+<h2 id="pci-6">PCI Express 6.0</h2>
+<p>Pode parecer brincadeira, mas não é: o PCI-SIG confirmou o desenvolvimento do <strong>PCI Express 6.0</strong> em junho de 2019, apenas alguns dias depois do anúncio oficial do <a href="https://www.infowester.com/pci-express.php#pci-5">PCIe 5.0</a>.</p>
+<p>O PCI Express 6.0 deverá ser anunciado <em>oficialmente</em> em 2021,
+ no entanto. A nova versão deverá ainda ter mais largura de banda: até 
+128 GB/s (o dobro da largura do PCI Express 5.0). Se essa característica
+ for confirmada, a tecnologia terá as seguintes velocidades:</p>
+<ul>
+<li><strong>PCIe 6.0 x1:</strong> 8 GB/s</li>
+<li><strong>PCIe 6.0 x4:</strong> 32 GB/s</li>
+<li><strong>PCIe 6.0 x8:</strong> 64 GB/s</li>
+<li><strong>PCIe 6.0 x16:</strong> 128 GB/s</li>
+</ul>
+<p>O que mais surpreende é que os planos para o PCIe 6.0 foram revelados
+ quando os primeiros dispositivos baseados no PCI Express 4.0 estavam 
+apenas começando a chegar ao mercado.</p>
+<p>Se não houver nenhuma mudança ou contratempo pelo caminho, o PCI 
+Express 6.0 será lançado em algum momento de 2021, mas os primeiros 
+dispositivos baseados na tecnologia só chegarão ao mercado no ano 
+seguinte, provavelmente.</p>
+<h2 id="velocidades">Conclusão: as velocidades do PCIe</h2>
+<p>Para finalizar, devo fazer duas considerações. A primeira diz respeito às <strong>velocidades máximas do PCI Express</strong>. Esse é um padrão capaz de trabalhar em modo <em>full duplex</em>: a transmissão é feita de modo bidirecional, ou seja, dados são enviados e recebidos ao mesmo tempo.</p>
+<p>Pois bem, as velocidades abordadas neste texto dizem respeito às 
+velocidades máximas em apenas uma única direção (só envio ou só 
+recebimento de dados), mas você pode encontrar com relativa facilidade 
+fabricantes e veículos especializados usando medições que consideram 
+envio e recebimento simultâneo de dados (bidirecional).</p>
+<p>Sempre que a abordagem for bidirecional, as velocidades do PCI Express aparecerão dobradas, observe:</p>
+<ul>
+<li><strong>PCIe 1.0:</strong> 8 GB/s</li>
+<li><strong>PCIe 2.0:</strong> 16 GB/s</li>
+<li><strong>PCIe 3.0:</strong> 32 GB/s</li>
+<li><strong>PCIe 4.0:</strong> 64 GB/s</li>
+<li><strong>PCie 5.0:</strong> 128 GB/s</li>
+<li><strong>PCie 6.0:</strong> 256 GB/s (previsto)</li>
+</ul>
+<p><img src="O%20que%20%C3%A9%20PCI%20Express%20(PCIe%20x1,%20x4,%20x8%20e%20x16)_files/pci-sig-bandwidth.jpg" loading="lazy" alt="Evolução do PCI Express" width="700" height="487"><br>
+<small>Evolução do PCI Express (Imagem original: PCI-SIG)</small></p>
+<p>Outra consideração importante é que, neste texto, largura de banda e 
+velocidade aparecem como sinônimos, mas por mera questão de 
+conveniência: comercialmente, essa abordagem é muito frequente.</p>
+<p>Porém, conceitualmente, essas duas métricas não são iguais. A largura
+ de banda indica, na verdade, a quantidade de dados que podem ser 
+transmitidos dentro de determinado período de tempo em uma conexão, mas 
+não necessariamente a velocidade em que isso ocorre.</p>
+<p>Mas como largura de banda e velocidade são métricas diretamente relacionadas, é comum ambas serem tratadas como a mesma coisa.</p>
+<p>Assuntos que podem te interessar:</p>
+<ul>
+<li><a href="https://www.infowester.com/sd_microsd.php">Tudo sobre cartões microSD e SD</a></li>
+<li><a href="https://www.infowester.com/hdmi-2-1.php">HDMI 2.1: o que é e quais são as suas características</a></li>
+<p><small>Publicado em 02_06_2019. Atualizado em 19/01/2023.</small></p>
+<div id="quem">
+<p><img src="O%20que%20%C3%A9%20PCI%20Express%20(PCIe%20x1,%20x4,%20x8%20e%20x16)_files/mini-ealecrim.jpg" loading="lazy" style="float: left; -moz-border-radius: 50%; -webkit-border-radius: 50%; border-radius: 50%;" alt="Emerson Alecrim" width="100" height="100" align="left">
+<strong>Autor: <a href="https://www.infowester.com/quem.php">Emerson Alecrim</a></strong><br>
+Graduado em ciência da computação, tem experiência profissional em TI e produz conteúdo sobre a área desde 2001.
+É especializado em temas como hardware, sistema operacionais, dispositivos móveis, internet e negócios.<br>
+Canais para contato (exceto dúvidas técnicas):
+<a href="https://twitter.com/ealecrim">Twitter</a>
+• <a href="https://br.linkedin.com/in/emersonalecrim">LinkedIn</a>
+• <a href="https://www.instagram.com/ealecrim/">Instagram</a></p>
+</div> <br>
+<div>
+<div>
+<script async="" src="O%20que%20%C3%A9%20PCI%20Express%20(PCIe%20x1,%20x4,%20x8%20e%20x16)_files/f_005.txt"></script>
+
+<ins class="adsbygoogle" style="display: block; height: 0px;" data-ad-client="ca-pub-2797463243909555" data-ad-slot="1102565440" data-ad-format="autorelaxed" data-adsbygoogle-status="done" data-ad-status="unfilled"><div id="aswift_3_host" style="border: medium none; height: 0px; width: 710px; margin: 0px; padding: 0px; position: relative; visibility: visible; background-color: transparent; display: inline-block; overflow: hidden; opacity: 0;" tabindex="0" title="Advertisement" aria-label="Advertisement"><iframe id="aswift_3" name="aswift_3" style="left: 0px; position: absolute; top: 0px; border: 0px none; width: 710px; height: 0px;" sandbox="allow-forms allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts allow-top-navigation-by-user-activation" marginwidth="0" marginheight="0" vspace="0" hspace="0" allowtransparency="true" scrolling="no" src="O%20que%20%C3%A9%20PCI%20Express%20(PCIe%20x1,%20x4,%20x8%20e%20x16)_files/ads_008.htm" data-google-container-id="a!4" data-load-complete="true" data-google-query-id="CP3I5ZqY3v0CFdjk7QodXqUCpw" width="710" height="0" frameborder="0"></iframe></div></ins>
+<script>
+		(adsbygoogle = window.adsbygoogle || []).push({});
+		</script>
+</div>
+</div>
+
+<div class="uol-footer-box" align="center">
+
+
+<div id="tools">
+<a class="back" href="javascript:history.go(-1)" title="Voltar">↩ Voltar</a>
+<a class="home" href="https://www.infowester.com/" title="Página inicial">⌂ Início</a>
+<a class="topo" href="#breadcrumb" title="Ir para o topo">↑ Topo</a>
+<br class="clear">
+</div>
+</div>
+<br class="clear">
+
+</ul></div> 
+</article>
+</div> 
+<aside class="col-md-4 blog-aside">
+<div class="aside-widget">
+<header>
+<h3>Últimas atualizações</h3>
+</header>
+<div class="body">
+<ul class="tales-list">
+<li><a href="https://www.infowester.com/softwares-projetos-eletricos.php">
+Conheça os melhores softwares para projetos elétricos</a> #publi</li>
+<li><a href="https://www.infowester.com/xml-pdf-windows.php">
+Como converter XML para PDF para Windows em poucos passos</a> #publi</li>
+<li><a href="https://www.infowester.com/freebsd-netbsd-openbsd.php">
+FreeBSD, NetBSD e OpenBSD: o que são e características</a></li><a href="https://www.infowester.com/freebsd-netbsd-openbsd.php">
+</a><li><a href="https://www.infowester.com/freebsd-netbsd-openbsd.php"></a><a href="https://www.infowester.com/placa-mae.php">
+Placa-mãe: o que é e principais características</a></li>
+<li><a href="https://www.infowester.com/engenharia-social.php">
+Engenharia social na internet: o que é e como se prevenir</a></li>
+<li><a href="https://www.infowester.com/edge-computing.php">
+Edge computing (computação de borda): o que é e para que serve</a></li>
+<li><a href="https://www.infowester.com/criptografia.php">
+Criptografia: o que é e para que serve</a></li>
+<li><a href="https://www.infowester.com/backup.php">
+Backup: o que é e por que é tão importante</a></li>
+<li><a href="https://www.infowester.com/wifi.php">
+O que é Wi-Fi? (conceito e versões)</a></li>
+<li><a href="https://www.infowester.com/workstation.php">
+Workstation (estação de trabalho): o que é, para que serve e tipos</a></li>
+<li><a href="https://www.infowester.com/vpn.php">
+VPN: o que é e para que serve</a></li>
+</ul>
+</div>
+</div>
+<div class="aside-widget">
+<hr>
+<div class="body">
+<style type="text/css">
+.sidebar_art_ad_1 { display:inline-block; width: 300px; height: 250px; }
+@media (max-width: 500px) { .sidebar_art_ad_1 { width: 300px; height: 250px; } }
+@media (min-width: 550px) { .sidebar_art_ad_1 { width: 300px; height: 600px; } }
+</style>
+
+<ins class="adsbygoogle sidebar_art_ad_1" data-ad-client="ca-pub-2797463243909555" data-ad-slot="4787198494" data-full-width-responsive="true" data-adsbygoogle-status="done" style="width: 300px; height: 600px;" data-ad-status="filled"><div id="aswift_4_host" style="border: medium none; height: 600px; width: 300px; margin: 0px; padding: 0px; position: relative; visibility: visible; background-color: transparent; display: inline-block;" tabindex="0" title="Advertisement" aria-label="Advertisement"><iframe id="aswift_4" name="aswift_4" style="left:0;position:absolute;top:0;border:0;width:300px;height:600px;" sandbox="allow-forms allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts allow-top-navigation-by-user-activation" marginwidth="0" marginheight="0" vspace="0" hspace="0" allowtransparency="true" scrolling="no" src="O%20que%20%C3%A9%20PCI%20Express%20(PCIe%20x1,%20x4,%20x8%20e%20x16)_files/ads_009.htm" data-google-container-id="a!5" data-google-query-id="CNeK5ZqY3v0CFZng7Qod22AJyg" data-load-complete="true" width="300" height="600" frameborder="0"></iframe></div></ins>
+<script async="" src="O%20que%20%C3%A9%20PCI%20Express%20(PCIe%20x1,%20x4,%20x8%20e%20x16)_files/f_005.txt"></script>
+<script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+</div>
+</div>
+</aside>
+</div> 
+</div>
+</div>
+<footer>
+<div class="widewrapper footer">
+<div class="container">
+<div class="row">
+<div class="col-md-4 footer-widget">
+<ul class="tales-list">
+<li><a href="https://www.infowester.com/contato.php">Contato</a></li>
+<li><a href="https://www.infowester.com/sobre.php">Sobre</a></li>
+<li><a href="https://www.infowester.com/privacidade.php">Privacidade</a></li>
+
+</ul>
+</div>
+<div class="col-md-4 footer-widget">
+<ul class="tales-list">
+<li><a href="https://www.facebook.com/infowester/">No Facebook</a></li>
+<li><a href="https://twitter.com/infowester/">No Twitter</a></li>
+<li><a href="https://www.infowester.com/newsiw.xml">Feed RSS</a></li>
+</ul>
+</div>
+<div class="col-md-4 footer-widget">
+<p>Por <a href="https://www.infowester.com/quem.php"><strong>Emerson Alecrim</strong></a></p>
+<p>Infowester 2001-2023<br>
+<a href="https://www.infowester.com/usoartigos.php">Licença CC BY-NC-SA 4.0</a></p>
+</div>
+</div>
+</div>
+</div>
+
+</footer>
+
+<script async="" src="O%20que%20%C3%A9%20PCI%20Express%20(PCIe%20x1,%20x4,%20x8%20e%20x16)_files/js_002"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-91337903-1');
+</script>
+<script src="O%20que%20%C3%A9%20PCI%20Express%20(PCIe%20x1,%20x4,%20x8%20e%20x16)_files/jquery.min.js"></script>
+<script>window.jQuery || document.write('<script src="layout04/js/vendor/jquery/jquery-3.6.0.min.js"><\/script>')</script>
+<script>var purecookieTitle="Cookies",purecookieDesc="Usamos cookies para melhorar a sua experiência.",purecookieLink='<a href="https://www.infowester.com/privacidade.php">Saiba mais</a>.',purecookieButton="Aceitar";function pureFadeIn(e,o){var i=document.getElementById(e);i.style.opacity=0,i.style.display=o||"block",function e(){var o=parseFloat(i.style.opacity);(o+=.02)>1||(i.style.opacity=o,requestAnimationFrame(e))}()}function pureFadeOut(e){var o=document.getElementById(e);o.style.opacity=1,function e(){(o.style.opacity-=.02)<0?o.style.display="none":requestAnimationFrame(e)}()}function setCookie(e,o,i){var t="";if(i){var n=new Date;n.setTime(n.getTime()+24*i*60*60*1e3),t="; expires="+n.toUTCString()}document.cookie=e+"="+(o||"")+t+"; path=/"}function getCookie(e){for(var o=e+"=",i=document.cookie.split(";"),t=0;t<i.length;t++){for(var n=i[t];" "==n.charAt(0);)n=n.substring(1,n.length);if(0==n.indexOf(o))return n.substring(o.length,n.length)}return null}function eraseCookie(e){document.cookie=e+"=; Max-Age=-99999999;"}function cookieConsent(){getCookie("purecookieDismiss")||(document.body.innerHTML+='<div class="cookieConsentContainer" id="cookieConsentContainer"><div class="cookieTitle"><a>'+purecookieTitle+'</a></div><div class="cookieDesc"><p>'+purecookieDesc+" "+purecookieLink+'</p></div><div class="cookieButton"><a onClick="purecookieDismiss();">'+purecookieButton+"</a></div></div>",pureFadeIn("cookieConsentContainer"))}function purecookieDismiss(){setCookie("purecookieDismiss","1",14),pureFadeOut("cookieConsentContainer")}window.onload=cookieConsent();</script><div class="cookieConsentContainer" id="cookieConsentContainer" style="opacity: -0.02; display: none;"><div class="cookieTitle"><a>Cookies</a></div><div class="cookieDesc"><p>Usamos cookies para melhorar a sua experiência. <a href="https://www.infowester.com/privacidade.php">Saiba mais</a>.</p></div><div class="cookieButton"><a onclick="purecookieDismiss();">Aceitar</a></div></div>
+<script src="O%20que%20%C3%A9%20PCI%20Express%20(PCIe%20x1,%20x4,%20x8%20e%20x16)_files/bootstrap.min.js"></script>
+<script src="O%20que%20%C3%A9%20PCI%20Express%20(PCIe%20x1,%20x4,%20x8%20e%20x16)_files/modernizr.js"></script>
+
+<script defer="defer" src="O%20que%20%C3%A9%20PCI%20Express%20(PCIe%20x1,%20x4,%20x8%20e%20x16)_files/vaafb692b2aea4879b33c060e79fe94621666317369993" integrity="sha512-0ahDYl866UMhKuYcW078ScMalXqtFJggm7TmlUtp0UlD4eQk0Ixfnm5ykXKvGJNFjLMoortdseTfsRT8oCfgGA==" data-cf-beacon="{&quot;rayId&quot;:&quot;7a85969c3b7b9506&quot;,&quot;version&quot;:&quot;2023.2.0&quot;,&quot;r&quot;:1,&quot;token&quot;:&quot;a50fd1386f5b4ddf938965c6b790c925&quot;,&quot;si&quot;:100}" crossorigin="anonymous"></script>
+
+
+<script>mendeleyWebImporter = {
+  downloadPdfs(e,t) { return this._call('downloadPdfs', [e,t]); },
+  open() { return this._call('open', []); },
+  setLoginToken(e) { return this._call('setLoginToken', [e]); },
+  _call(methodName, methodArgs) {
+    const id = Math.random();
+    window.postMessage({ id, token: '0.7599729425005841', methodName, methodArgs }, 'https://www.infowester.com');
+    return new Promise(resolve => {
+      const listener = window.addEventListener('message', event => {
+        const data = event.data;
+        if (typeof data !== 'object' || !('result' in data) || data.id !== id) return;
+        window.removeEventListener('message', listener);
+        resolve(data.result);
+      });
+    });
+  }
+};</script><ins class="adsbygoogle adsbygoogle-noablate" style="display: none !important;" data-adsbygoogle-status="done" data-ad-status="unfilled"><div id="aswift_0_host" style="border: medium none; height: 0px; width: 0px; margin: 0px; padding: 0px; position: relative; visibility: visible; background-color: transparent; display: inline-block;" tabindex="0" title="Advertisement" aria-label="Advertisement"><iframe id="aswift_0" name="aswift_0" style="left:0;position:absolute;top:0;border:0;width:undefinedpx;height:undefinedpx;" sandbox="allow-forms allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts allow-top-navigation-by-user-activation" marginwidth="0" marginheight="0" vspace="0" hspace="0" allowtransparency="true" scrolling="no" src="O%20que%20%C3%A9%20PCI%20Express%20(PCIe%20x1,%20x4,%20x8%20e%20x16)_files/ads_010.htm" data-google-container-id="a!1" data-load-complete="true" frameborder="0"></iframe></div></ins><ins class="adsbygoogle adsbygoogle-noablate" data-adsbygoogle-status="done" style="display: block; width: 100% !important; height: 129px !important; bottom: 0px; clear: none !important; float: none !important; left: 0px; margin: 0px !important; max-height: none !important; max-width: none !important; opacity: 1; overflow: visible !important; padding: 0px !important; position: fixed; right: auto !important; top: auto !important; vertical-align: baseline !important; visibility: visible !important; z-index: 2147483647; background: rgb(250, 250, 250) !important;" data-anchor-status="displayed" data-anchor-shown="true" data-ad-status="filled"><div class="grippy-host"></div><div id="aswift_11_host" style="border: medium none !important; height: 124px !important; width: 100% !important; margin: 0px !important; padding: 0px !important; position: relative !important; visibility: visible !important; background-color: transparent !important; display: inline-block !important; inset: auto !important; clear: none !important; float: none !important; max-height: none !important; max-width: none !important; opacity: 1 !important; overflow: visible !important; vertical-align: baseline !important; z-index: auto !important;" tabindex="0" title="Advertisement" aria-label="Advertisement"><iframe id="aswift_11" name="aswift_11" style="width: 1005px !important; height: 124px !important; display: block; margin: 0px auto;" sandbox="allow-forms allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts allow-top-navigation-by-user-activation" marginwidth="0" marginheight="0" vspace="0" hspace="0" allowtransparency="true" scrolling="no" src="O%20que%20%C3%A9%20PCI%20Express%20(PCIe%20x1,%20x4,%20x8%20e%20x16)_files/zrt_lookup.htm" data-google-container-id="a!c" data-google-query-id="CIiI5JqY3v0CFSVh5godgiAJOg" data-load-complete="true" width="1005" height="124" frameborder="0"></iframe></div></ins></body><iframe id="google_esf" name="google_esf" src="O%20que%20%C3%A9%20PCI%20Express%20(PCIe%20x1,%20x4,%20x8%20e%20x16)_files/zrt_lookup_002.htm" style="display: none;"></iframe><ins class="adsbygoogle adsbygoogle-noablate" style="display: none !important; width: 100vw !important; height: 100vh !important; inset: 0px auto auto 0px !important; clear: none !important; float: none !important; margin: 0px !important; max-height: none !important; max-width: none !important; opacity: 1 !important; overflow: visible !important; padding: 0px !important; position: fixed !important; vertical-align: baseline !important; visibility: visible !important; z-index: 2147483647 !important; background: transparent !important;" data-adsbygoogle-status="done" aria-hidden="true" data-vignette-loaded="true" data-ad-status="filled"><div id="aswift_10_host" style="border: medium none !important; height: 100vh !important; width: 100vw !important; margin: 0px !important; padding: 0px !important; position: relative !important; visibility: visible !important; background-color: transparent !important; display: inline-block !important; inset: auto !important; clear: none !important; float: none !important; max-height: none !important; max-width: none !important; opacity: 1 !important; overflow: visible !important; vertical-align: baseline !important; z-index: auto !important;" tabindex="0" title="Advertisement" aria-label="Advertisement"><iframe id="aswift_10" name="aswift_10" style="width: 100vw !important; height: 100vh !important; inset: 0px auto auto 0px !important; position: absolute !important; clear: none !important; display: inline !important; float: none !important; margin: 0px !important; max-height: none !important; max-width: none !important; opacity: 1 !important; overflow: visible !important; padding: 0px !important; vertical-align: baseline !important; visibility: visible !important; z-index: auto !important;" sandbox="allow-forms allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts allow-top-navigation-by-user-activation" marginwidth="0" marginheight="0" vspace="0" hspace="0" allowtransparency="true" scrolling="no" src="O%20que%20%C3%A9%20PCI%20Express%20(PCIe%20x1,%20x4,%20x8%20e%20x16)_files/zrt_lookup_003.htm" data-google-container-id="a!b" data-google-query-id="CIeI5JqY3v0CFSVh5godgiAJOg" data-load-complete="true" width="" height="" frameborder="0"></iframe></div></ins></html>
