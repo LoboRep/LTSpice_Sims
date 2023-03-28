@@ -1,0 +1,1 @@
+window.dpmPixels[0].updateUserVariable({"country_code":"620","city":"funchal","latitude":"32.64","ipAddress":"62.28.138.250","appnexusId":"0","dma":"-1","uuid":"a46326ff88d3ec997c9284957d4ec7f4b419fe87","longitude":"-16.92"});

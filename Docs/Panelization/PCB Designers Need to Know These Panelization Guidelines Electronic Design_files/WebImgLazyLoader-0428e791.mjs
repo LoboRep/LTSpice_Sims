@@ -1,0 +1,1 @@
+import{_ as o,l as t,m as s,x as n,aO as l}from"./_plugin-vue_export-helper-15c97ded.mjs";const r={props:{lazyLoad:{type:Boolean,default:!0}}},c=["loading"];function d(a,_,e,i,p,u){return t(),s("div",null,[n("img",l(a.$attrs,{loading:e.lazyLoad?"lazy":"auto",style:{display:"block",maxWidth:"100%",height:"auto"}}),null,16,c)])}const f=o(r,[["render",d]]);export{f as default};
